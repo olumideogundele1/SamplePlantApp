@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:my_plant_ui/constants.dart';
 import 'package:my_plant_ui/screens/components/header_screen_with_search.dart';
 
+import 'FeatureCard.dart';
+import 'feature_cards.dart';
 import 'plant_cards.dart';
 import 'title_with_more_btn.dart';
 
@@ -17,10 +20,13 @@ class Body extends StatelessWidget {
           HeaderWithSearchBox(size: size),
           TextWithMoreBtn(title: 'Recomended',press: (){},),
           PlantCards(),
-          TextWithMoreBtn(title: 'Feauterd Plants',press: (){},)
+          TextWithMoreBtn(title: 'Feauterd Plants',press: (){},),
+          FeatureCards(),
         ],
       ),
     );
   }
 }
+
+
 
