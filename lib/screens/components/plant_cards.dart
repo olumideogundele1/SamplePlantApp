@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_plant_ui/screens/components/plant_card.dart';
-
-import '../../constants.dart';
+import 'details/details_screen.dart';
 
 class PlantCards extends StatelessWidget {
   const PlantCards({
@@ -18,21 +17,32 @@ class PlantCards extends StatelessWidget {
             title: "Samantha",
             country: "Russia",
             price: 440,
-            tap: (){},
+            tap: (){
+              Navigator.push(context,
+              MaterialPageRoute(builder: (context) => DetailsScreen())
+              );
+            },
             image: "assets/images/image_1.png",
           ),
           RecommendedPlantCard(
             title: "Samantha",
             country: "UK",
             price: 446,
-            tap: (){},
+            tap: (){
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => DetailsScreen())
+              );
+            },
             image: "assets/images/image_2.png",
           ),
           RecommendedPlantCard(
             title: "Samantha",
             country: "USA",
             price: 445,
-            tap: (){},
+            tap: (){
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => DetailsScreen()));
+            },
             image: "assets/images/image_3.png",
           ),
         ],

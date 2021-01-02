@@ -1,6 +1,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:my_plant_ui/components/bottom_nav_bar.dart';
+import 'package:my_plant_ui/constants.dart';
 import 'package:my_plant_ui/screens/components/body.dart';
 
 
@@ -12,6 +14,7 @@ class HomeScreen extends StatelessWidget{
     return Scaffold(
       appBar: buildAppBar(),
       body: Body(),
+      bottomNavigationBar: BottomNavBar(),
     );
   }
 
@@ -28,3 +31,4 @@ class HomeScreen extends StatelessWidget{
   }
 
 }
+
