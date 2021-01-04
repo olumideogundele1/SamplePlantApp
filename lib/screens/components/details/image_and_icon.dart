@@ -5,15 +5,14 @@ import '../../../constants.dart';
 import 'icon_card.dart';
 
 class ImageAndIconCard extends StatelessWidget {
-  const ImageAndIconCard({
-    Key key,
-    @required this.size,
-  }) : super(key: key);
 
-  final Size size;
+  final String imageUrl;
+
+  ImageAndIconCard({@required this.imageUrl});
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Container(
       height: size.height * 0.8,
       padding: EdgeInsets.only(
@@ -52,8 +51,8 @@ class ImageAndIconCard extends StatelessWidget {
             decoration: BoxDecoration(
                 image: DecorationImage(
                   fit: BoxFit.cover,
-                  alignment: Alignment.centerLeft,
-                  image: AssetImage("assets/images/img.png"),
+                  alignment: Alignment.center,
+                  image: AssetImage(imageUrl),
                 ),
                 borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(50),

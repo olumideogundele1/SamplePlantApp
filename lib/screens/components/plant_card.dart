@@ -11,7 +11,6 @@ class RecommendedPlantCard extends StatelessWidget {
   final String image;
 
   const RecommendedPlantCard({Key key, this.title, this.country, this.price, this.tap, this.image}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;

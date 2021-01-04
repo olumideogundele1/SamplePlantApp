@@ -4,6 +4,13 @@ import 'package:my_plant_ui/constants.dart';
 import 'image_and_icon.dart';
 import 'title_and_price.dart';
 class Body extends StatelessWidget {
+
+  final String title;
+  final String country;
+  final int price;
+  final String imageUrl;
+
+  const Body({this.title, this.country, this.price, this.imageUrl});
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -11,11 +18,11 @@ class Body extends StatelessWidget {
       scrollDirection: Axis.vertical,
       child: Column(
         children: <Widget>[
-          ImageAndIconCard(size: size),
+          ImageAndIconCard(imageUrl: imageUrl),
           TitleAndPrice(
-            title: 'Angelica',
-            country: 'Russia',
-            price: 440,
+            title: title,
+            country: country,
+            price: price,
           ),
           SizedBox(height: kDefaultPadding,),
           Row(
